@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@WebServlet(name = "frontControllerRecap", urlPatterns = "servlet/recap/*")
+@WebServlet(name = "frontControllerRecap", urlPatterns = "/servlet/recap/*")
 public class FrontControllerRecap extends HttpServlet {
 
     private Map<String, ControllerRecap> controllerStore = new HashMap<>();
