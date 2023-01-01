@@ -1,8 +1,7 @@
 package hello.servlet.web.frontcontroller.v5;
 
-import hello.servlet.web.frontcontroller.ModelView;
+import hello.servlet.web.frontcontroller.ModelAndView;
 import hello.servlet.web.frontcontroller.MyView;
-import hello.servlet.web.frontcontroller.v3.ControllerV3;
 import hello.servlet.web.frontcontroller.v3.controller.MemberFormControllerV3;
 import hello.servlet.web.frontcontroller.v3.controller.MemberListControllerV3;
 import hello.servlet.web.frontcontroller.v3.controller.MemberSaveControllerV3;
@@ -61,7 +60,7 @@ public class FrontControllerServletV5 extends HttpServlet {
 
         MyHandlerAdapter adapter = getHandlerAdapter(handler);
 
-        ModelView mv = adapter.handle(request, response, handler);
+        ModelAndView mv = adapter.handle(request, response, handler);
 
         String viewName = mv.getViewName();
         MyView view = viewResolver(viewName);
